@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        AI Dataset One-Hot Encoder
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/frontend/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+    <h1>
+        AI Dataset One-Hot Encoder using Decoder Logic
+    </h1>
+
+    <p>
+        Upload Any CSV Dataset and Generate Dynamic One-Hot Encoding
+    </p>
+
+</header>
+
+
+
+<main class="container">
+
+
+    <!-- UPLOAD -->
+
+    <section class="card">
+
+        <h2>
+            Upload Dataset
+        </h2>
+
+        <p class="description">
+
+            Upload any CSV file.
+            The system automatically detects all
+            categorical columns and their unique values.
+
+        </p>
+
+
+        <div class="upload-area">
+
+            <input
+                type="file"
+                id="csvFile"
+                accept=".csv"
+            >
+
+            <button
+                onclick="uploadDataset()"
+            >
+                Upload & Process File
+            </button>
+
+        </div>
+
+
+        <div
+            id="uploadMessage"
+            class="message hidden"
+        ></div>
+
+    </section>
+
+
+
+    <!-- DATASET SUMMARY -->
+
+    <section
+        id="summaryCard"
+        class="card hidden"
+    >
+
+        <h2>
+            Dataset Summary
+        </h2>
+
+
+        <div
+            id="summary"
+            class="status-box"
+        ></div>
+
+    </section>
+
+
+
+    <!-- COLUMN MAPPINGS -->
+
+    <section
+        id="mappingCard"
+        class="card hidden"
+    >
+
+        <h2>
+            Automatic Category Mapping
+        </h2>
+
+
+        <p class="description">
+
+            Each categorical column gets its own
+            binary code and one-hot representation.
+
+        </p>
+
+
+        <div id="mappingContainer"></div>
+
+    </section>
+
+
+
+    <!-- PROCESSED DATA -->
+
+    <section
+        id="datasetCard"
+        class="card hidden"
+    >
+
+        <h2>
+            Processed Dataset
+        </h2>
+
+
+        <div
+            id="datasetResult"
+            class="table-container"
+        ></div>
+
+
+        <button
+            onclick="downloadEncodedDataset()"
+        >
+            Download Encoded Dataset
+        </button>
+
+    </section>
+
+
+
+    <!-- TESTING -->
+
+    <section class="card">
+
+        <h2>
+            System Testing
+        </h2>
+
+
+        <div class="button-grid">
+
+            <button
+                onclick="runNormalTests()"
+            >
+                Run 10 Test Cases
+            </button>
+
+
+            <button
+                onclick="runEdgeTests()"
+            >
+                Run 5 Edge Tests
+            </button>
+
+
+            <button
+                onclick="showValidation()"
+            >
+                Validation Report
+            </button>
+
+        </div>
+
+
+        <div
+            id="testResult"
+            class="result-card hidden"
+        ></div>
+
+    </section>
+
+
+
+    <!-- WORKING FLOW -->
+
+    <section class="card">
+
+        <h2>
+            Working Flow
+        </h2>
+
+
+        <div class="flow">
+
+            <div class="flow-box">
+                Upload CSV
+            </div>
+
+            <span>→</span>
+
+            <div class="flow-box">
+                Read All Columns
+            </div>
+
+            <span>→</span>
+
+            <div class="flow-box">
+                Detect Categories
+            </div>
+
+            <span>→</span>
+
+            <div class="flow-box">
+                Generate Binary Code
+            </div>
+
+            <span>→</span>
+
+            <div class="flow-box">
+                Decoder Logic
+            </div>
+
+            <span>→</span>
+
+            <div class="flow-box">
+                One-Hot Vector
+            </div>
+
+            <span>→</span>
+
+            <div class="flow-box">
+                Download
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<footer>
+
+    AI Dataset One-Hot Encoder using Decoder Logic
+
+</footer>
+
+
+<script src="/frontend/script.js"></script>
+
+</body>
+
+</html>

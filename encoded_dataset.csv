@@ -1,0 +1,11 @@
+ID,Category,Binary_Code,One_Hot_Vector,Status
+1,Red,00,"[1, 0, 0, 0]",VALID
+2,Blue,01,"[0, 1, 0, 0]",VALID
+3,Green,10,"[0, 0, 1, 0]",VALID
+4,Yellow,11,"[0, 0, 0, 1]",VALID
+5,Red,00,"[1, 0, 0, 0]",VALID
+6,Green,10,"[0, 0, 1, 0]",VALID
+7,Blue,01,"[0, 1, 0, 0]",VALID
+8,Yellow,11,"[0, 0, 0, 1]",VALID
+9,Red,00,"[1, 0, 0, 0]",VALID
+10,Blue,01,"[0, 1, 0, 0]",VALID
